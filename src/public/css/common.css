@@ -1,0 +1,33 @@
+.header {
+    background: #fff;
+}
+
+.header__inner {
+    margin: auto;
+    padding: 20px 15px;
+    max-width: 1230px;
+}
+
+.header-utilities {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.header__logo {
+    color: #8b7969;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 24px;
+}
+
+.header-nav__link {
+    padding: 10px;
+    width: 30%;
+    height: 50px;
+    border: 1px solid #d9c6b5;
+    border-radius: 3px;
+    background: #edeae6;
+    color: #d9c6b5;
+    cursor: pointer;
+}

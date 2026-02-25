@@ -1,0 +1,142 @@
+.section__title {
+    margin-bottom: 40px;
+    text-align: center;
+}
+
+.search__content,
+.contact__content {
+    margin: 0 auto;
+    padding: 30px 15px;
+    max-width: 1230px;
+}
+
+.search-form {
+    display: flex;
+    justify-content: space-between;
+    margin: 0 auto;
+    margin-bottom: 15px;
+    width: 70%;
+    text-align: center;
+}
+
+.search-form__item {
+    display: flex;
+    width: 70%;
+}
+
+.search-form__item-input {
+    margin-right: 10px;
+    padding: 10px;
+    /* width: 100%; */
+    width: 70%;
+    height: 40px;
+    border: 1px solid #ddd;
+    border-radius: 3px;
+}
+
+.search-form__item-select {
+    padding: 10px;
+    width: 30%;
+    height: 40px;
+    border: 1px solid #ddd;
+    border-radius: 3px;
+    appearance: none;
+}
+
+.search-form__button,
+.reset-form__button {
+    width: 20%;
+}
+
+.search-form__button-submit {
+    padding: 10px;
+    width: 100%;
+    height: 40px;
+    border: none;
+    border-radius: 3px;
+    background: #8b7969;
+    color: #fff;
+    cursor: pointer;
+}
+
+.reset-form__button-submit {
+    padding: 10px;
+    width: 100%;
+    height: 40px;
+    border: none;
+    border-radius: 3px;
+    background: #d9c6b5;
+    color: #fff;
+    cursor: pointer;
+}
+
+.contact-table {
+    margin: 30px auto;
+    width: 70%;
+    text-align: left;
+}
+
+.contact-table__inner {
+    width: 100%;
+}
+
+.contact-table__row {
+    border-bottom: 1px solid #ddd;
+}
+
+.contact-table__header {
+    padding: 12px;
+    width: 20%;
+    text-align: left;
+    font-weight: bold;
+    background: #8b7969;
+    color: #fff;
+}
+
+.contact-table__header-span {
+    margin-right: 40%;
+}
+
+.contact-table__item:first-of-type {
+    padding: 12px;
+    width: 90%;
+}
+
+.contact-table__item {
+    width: 40%;
+    line-height: 50%;
+}
+
+.contact-table__item-p {
+    text-align: left;
+    font-size: 13px;
+}
+
+.contact-table__button {
+    width: 50px;
+}
+
+.contact-table__button-submit {
+    padding: 10px;
+    width: 30%;
+    height: 50px;
+    border: 1px solid #d9c6b5;
+    border-radius: 3px;
+    background: #edeae6;
+    color: #d9c6b5;
+    cursor: pointer;
+}
+
+.delete-form__button {
+    width: 50px;
+}
+
+.delete-form__button-submit {
+    padding: 5px;
+    width: 100%;
+    border: none;
+    border-radius: 3px;
+    background: #ba370d;
+    color: #fff;
+    cursor: pointer;
+}
