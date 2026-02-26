@@ -140,3 +140,57 @@
     color: #fff;
     cursor: pointer;
 }
+
+.detail__content {
+    margin: 0 auto;
+    padding: 30px 15px;
+    max-width: 1230px;
+}
+
+.detail__heading {
+    margin-bottom: 40px;
+    text-align: center;
+}
+
+.form {
+    margin: 0 auto;
+    width: 70%;
+}
+
+.detail-table {
+    border: 1px solid #ddd;
+}
+
+.detail-table__inner {
+    width: 100%;
+}
+
+.detail-table__header {
+    padding: 15px;
+    width: 20%;
+    border-bottom: 1px solid #ddd;
+    background-color: #baa999;
+    font-weight: bold;
+}
+
+.detail-table__text {
+    padding: 15px;
+    border-bottom: 1px solid #ddd;
+}
+
+.detail-table__text input {
+    width: 100%;
+    outline: none;
+    border: none;
+}
+
+.detail-table__row:last-child .detail-table__header,
+.detail-table__row:last-child .detail-table__text {
+    border-bottom-width: 0;
+}
+
+.close__button {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+}

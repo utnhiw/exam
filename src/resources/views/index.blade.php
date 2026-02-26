@@ -108,7 +108,6 @@
         <div class="form__group">
             <div class="form__group-title">
                 <span class="form__label--item">建物名</span>
-                <span class="form__label--required">※</span>
             </div>
             <div class="form__group-content">
                 <div class="form__input--text">
