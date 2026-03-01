@@ -2,7 +2,6 @@
 
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\ContactController;
-use App\Http\Livewire\Modal;
 
 /*
 |--------------------------------------------------------------------------
@@ -24,3 +23,7 @@ Route::delete('/delete', [ContactController::class, 'destroy']);
 Route::middleware('auth')->group(function () {
     Route::get('/admin', [ContactController::class, 'admin']);
 });
+// Route::get('/admin', function () {
+//     $categories = Category::all();
+//     return view('admin', compact('categories'));
+// })->middleware('auth');

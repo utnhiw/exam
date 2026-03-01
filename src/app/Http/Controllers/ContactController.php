@@ -3,7 +3,6 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
-use Illuminate\Pagination\Paginator;
 use App\Models\Contact;
 use App\Models\Category;
 use App\Http\Requests\ContactRequest;
