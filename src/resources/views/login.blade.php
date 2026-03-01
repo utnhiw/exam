@@ -21,7 +21,7 @@
     <div class="login-form__heading">
         <h2>Login</h2>
     </div>
-    <form class="form" action="/contacts/confirm" method="post">
+    <form class="form" action="/login" method="post">
         @csrf
         <div class="form__group">
             <div class="form__group-title">

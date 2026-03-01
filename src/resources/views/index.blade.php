@@ -9,7 +9,7 @@
     <div class="contact-form__heading">
         <h2>Contact</h2>
     </div>
-    <form class="form" action="/contacts/confirm" method="post">
+    <form class="form" action="/confirm" method="post">
         @csrf
         <div class="form__group">
             <div class="form__group-title">
@@ -38,9 +38,9 @@
             </div>
             <div class="form__group-content">
                 <div class="form__item-radio">
-                    <input type="radio" name="gender" value="1" checked>男性
-                    <input type="radio" name="gender" value="2">女性
-                    <input type="radio" name="gender" value="3">その他
+                    <input type="radio" name="gender" value="1" {{ old('gender') == '1' ? 'checked' : '' }}>男性
+                    <input type="radio" name="gender" value="2" {{ old('gender') == '2' ? 'checked' : '' }}>女性
+                    <input type="radio" name="gender" value="3" {{ old('gender') == '3' ? 'checked' : '' }}>その他
                 </div>
                 <div class="form__error">
                     @error('gender')
@@ -113,11 +113,6 @@
                 <div class="form__input--text">
                     <input type="text" name="building" placeholder="例　千駄ヶ谷マンション101" value="{{ old('building') }}" />
                 </div>
-                <div class="form__error">
-                    @error('building')
-                    {{ $message }}
-                    @enderror
-                </div>
             </div>
         </div>
         <div class="form__group">
@@ -129,7 +124,7 @@
                 <select class="form__item-select" name="category_id">
                     <option value="">選択してください</option>
                     @foreach ($categories as $category)
-                    <option value="{{ $category['id'] }}">{{ $category['content'] }}</option>
+                    <option value="{{ $category['id'] }}" {{ old('category_id') == $category->id ? 'selected' : '' }}>{{ $category['content'] }}</option>
                     @endforeach
                 </select>
                 <div class="form__error">
@@ -142,10 +137,16 @@
         <div class="form__group">
             <div class="form__group-title">
                 <span class="form__label--item">お問い合わせ内容</span>
+                <span class="form__label--required">※</span>
             </div>
             <div class="form__group-content">
                 <div class="form__input--textarea">
-                    <textarea name="content" placeholder="お問い合わせの内容を入力してください"></textarea>
+                    <textarea name="detail" placeholder="お問い合わせの内容を入力してください">{{ old('detail') }}</textarea>
+                </div>
+                <div class="form__error">
+                    @error('detail')
+                    {{ $message }}
+                    @enderror
                 </div>
             </div>
         </div>

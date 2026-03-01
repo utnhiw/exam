@@ -58,6 +58,7 @@
 }
 
 .form__input--text input {
+    width: 70%;
     height: 40px;
 }
 
@@ -72,7 +73,7 @@
 
 .form__item-select {
     padding: 10px;
-    width: 30%;
+    width: 50%;
     height: 40px;
     border: 1px solid #ddd;
     border-radius: 3px;

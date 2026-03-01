@@ -2,6 +2,7 @@
 
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\ContactController;
+use App\Http\Livewire\Modal;
 
 /*
 |--------------------------------------------------------------------------
@@ -15,3 +16,11 @@ use App\Http\Controllers\ContactController;
 */
 
 Route::get('/', [ContactController::class, 'index']);
+Route::post('/confirm', [ContactController::class, 'confirm']);
+Route::post('/store', [ContactController::class, 'store']);
+Route::get('/search', [ContactController::class, 'search']);
+Route::delete('/delete', [ContactController::class, 'destroy']);
+
+Route::middleware('auth')->group(function () {
+    Route::get('/admin', [ContactController::class, 'admin']);
+});
