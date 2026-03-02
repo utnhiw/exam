@@ -34,7 +34,7 @@
 - Docker／Docker Compose がインストール済みであること
 
 ### Dockerビルドからマイグレーション、シーディングまでを記載
-- git clone <リポジトリURL>
+- git clone git@github.com:utnhiw/exam.git
 - docker-compose up -d --build
 - docker-compose exec php bash
 - composer install
