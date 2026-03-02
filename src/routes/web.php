@@ -23,7 +23,3 @@ Route::delete('/delete', [ContactController::class, 'destroy']);
 Route::middleware('auth')->group(function () {
     Route::get('/admin', [ContactController::class, 'admin']);
 });
-// Route::get('/admin', function () {
-//     $categories = Category::all();
-//     return view('admin', compact('categories'));
-// })->middleware('auth');

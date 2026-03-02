@@ -2,20 +2,18 @@
     margin: 0 auto;
     padding: 30px 15px;
     max-width: 1230px;
+    text-align: center;
 }
 
 .thanks__heading {
     margin-bottom: 40px;
-    text-align: center;
+    color: #8b7969;
 }
 
 .thanks__button {
     margin-top: 30px;
-}
-
-.thanks__button-button {
     padding: 10px;
-    width: 30%;
+    width: 20%;
     height: 50px;
     border: none;
     border-radius: 3px;

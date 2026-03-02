@@ -8,9 +8,9 @@
 <nav>
     <ul class="header-nav">
         <li class="header-nav__item">
-            <form class="header-nav__link" action="/logout" method="post">
+            <form class="form" action="/logout" method="post">
                 @csrf
-                <button type="submit">logout</button>
+                <button class="header-nav__link" type="submit">logout</button>
             </form>
         </li>
     </ul>
@@ -25,7 +25,7 @@
     <form class="search-form" action="/search" method="GET">
         @csrf
         <div class="search-form__item">
-            <input class="search-form__item-input" type="text" name="keyword" value="{{ request('keyword') }}">
+            <input class="search-form__item-input" type="text" name="keyword" placeholder="名前やメールアドレスを入力してください" value="{{ request('keyword') }}">
             <select class="search-form__item-select" name="gender" value="{{ request('gender') }}">
                 <option value="" selected>性別</option>
                 <option value="all" {{ request('gender') == 'all' ? 'selected' : '' }}>全て</option>
@@ -57,9 +57,7 @@
             </div>
         </div>
         <div class="search-form__item">
-            <div class="search-form__button">
-                {{ $contacts->links() }}
-            </div>
+            {{ $contacts->links() }}
         </div>
     </div>
 </div>

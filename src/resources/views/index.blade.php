@@ -17,7 +17,7 @@
                 <span class="form__label--required">※</span>
             </div>
             <div class="form__group-content">
-                <div class="form__input--text">
+                <div class="form__short-input--text">
                     <input type="text" name="last_name" placeholder="例　山田" value="{{ old('last_name') }}" />
                     <input type="text" name="first_name" placeholder="例　太郎" value="{{ old('first_name') }}" />
                 </div>
@@ -71,21 +71,15 @@
                 <span class="form__label--required">※</span>
             </div>
             <div class="form__group-content">
-                <div class="form__input--text">
+                <div class="form__short-input--text">
                     <input type="tel" name="tel1" placeholder="090" value="{{ old('tel1') }}" />-
                     <input type="tel" name="tel2" placeholder="1234" value="{{ old('tel2') }}" />-
                     <input type="tel" name="tel3" placeholder="5678" value="{{ old('tel3') }}" />
                 </div>
                 <div class="form__error">
-                    @error('tel1')
-                    {{ $message }}
-                    @enderror
-                    @error('tel2')
-                    {{ $message }}
-                    @enderror
-                    @error('tel3')
-                    {{ $message }}
-                    @enderror
+                    @if ($errors->hasAny(['tel1', 'tel2', 'tel3']))
+                    {{ $errors->first('tel1') ?: ($errors->first('tel2') ?: $errors->first('tel3')) }}
+                    @endif
                 </div>
             </div>
         </div>

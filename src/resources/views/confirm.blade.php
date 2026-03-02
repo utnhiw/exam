@@ -71,9 +71,9 @@
                     <td class="confirm-table__text">
                         <input type="hidden" name="category_id" value="{{ $contact['category_id'] }}" />
                         @foreach ($categories as $category)
-                            @if ($category->id == $contact['category_id'])
-                                {{ $category->content }}
-                            @endif
+                        @if ($category->id == $contact['category_id'])
+                        {{ $category->content }}
+                        @endif
                         @endforeach
                     </td>
                 </tr>
@@ -88,7 +88,7 @@
         </div>
         <div class="form__button">
             <button class="form__button-submit" type="submit" name="action" value="submit">送信</button>
-            <button type="submit" name='action' value="back">修正</button>
+            <button class="form__button-modify" type="submit" name='action' value="back">修正</button>
         </div>
     </form>
 </div>
